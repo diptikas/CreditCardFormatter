@@ -35,4 +35,17 @@ public class CreditCardUtils {
         return NONE;
     }
 
+    public static boolean isValid(String cardNumber) {
+        if (!TextUtils.isEmpty(cardNumber) && cardNumber.length() >= 4)
+            if (getCardType(cardNumber) == VISA && ((cardNumber.length() == 13 || cardNumber.length() == 16)))
+                return true;
+            else if (getCardType(cardNumber) == MASTERCARD && cardNumber.length() == 16)
+                return true;
+            else if (getCardType(cardNumber) == AMEX && cardNumber.length() == 15)
+                return true;
+            else if (getCardType(cardNumber) == DINERS && cardNumber.length() == 14)
+                return true;
+        return false;
+    }
+
 }

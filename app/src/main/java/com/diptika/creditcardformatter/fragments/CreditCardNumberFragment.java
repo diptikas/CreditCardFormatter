@@ -11,11 +11,13 @@ import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.diptika.creditcardformatter.R;
 import com.diptika.creditcardformatter.activity.CreditCardFormatterActivity;
 import com.diptika.creditcardformatter.utils.CreditCardEditText;
 import com.diptika.creditcardformatter.utils.CreditCardFormattingTextWatcher;
+import com.diptika.creditcardformatter.utils.CreditCardUtils;
 
 
 public class CreditCardNumberFragment extends Fragment {
@@ -55,7 +57,10 @@ public class CreditCardNumberFragment extends Fragment {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
                     if (activity != null) {
                         hideSoftKeyboard();
-                        activity.onBackPressed();
+                        String msg=CreditCardUtils.isValid(etNumber.getText().toString().replace(" ",""))?
+                                etNumber.getContext().getString(R.string.valid_card_number):
+                                etNumber.getContext().getString(R.string.invalid_card_number);
+                        Toast.makeText(activity,msg,Toast.LENGTH_SHORT).show();
                         return true;
                     }
 
@@ -67,8 +72,10 @@ public class CreditCardNumberFragment extends Fragment {
         etNumber.setOnBackButtonListener(new CreditCardEditText.BackButtonListener() {
             @Override
             public void onBackClick() {
-                if (activity != null)
+                if (activity != null) {
                     hideSoftKeyboard();
+                    activity.onBackPressed();
+                }
             }
         });
 
