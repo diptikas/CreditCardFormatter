@@ -1,4 +1,4 @@
-package com.assignment.creditcardformatter.utils;
+package com.diptika.creditcardformatter.utils;
 
 import android.content.Context;
 import android.support.v7.widget.AppCompatEditText;

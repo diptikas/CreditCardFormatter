@@ -17,7 +17,7 @@
                 style="@style/CardLabel"
                 android:text="@string/card_number"/>
 
-            <com.assignment.creditcardformatter.utils.CreditCardEditText
+            <com.diptika.creditcardformatter.utils.CreditCardEditText
                 style="@style/CardInput"
                 android:id="@+id/et_number"
                 android:hint="Card Number"

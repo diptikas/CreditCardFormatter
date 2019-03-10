@@ -1,4 +1,4 @@
-package com.assignment.creditcardformatter.utils;
+package com.diptika.creditcardformatter.utils;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -6,7 +6,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.assignment.creditcardformatter.R;
+import com.diptika.creditcardformatter.R;
 
 
 public class CreditCardFormattingTextWatcher implements TextWatcher {

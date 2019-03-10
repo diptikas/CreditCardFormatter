@@ -1,4 +1,4 @@
-package com.assignment.creditcardformatter.fragments;
+package com.diptika.creditcardformatter.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.widget.TextView;
 
-import com.assignment.creditcardformatter.activity.CreditCardFormatterActivity;
-import com.assignment.creditcardformatter.R;
-import com.assignment.creditcardformatter.utils.CreditCardEditText;
-import com.assignment.creditcardformatter.utils.CreditCardFormattingTextWatcher;
+import com.diptika.creditcardformatter.R;
+import com.diptika.creditcardformatter.activity.CreditCardFormatterActivity;
+import com.diptika.creditcardformatter.utils.CreditCardEditText;
+import com.diptika.creditcardformatter.utils.CreditCardFormattingTextWatcher;
 
 
 public class CreditCardNumberFragment extends Fragment {

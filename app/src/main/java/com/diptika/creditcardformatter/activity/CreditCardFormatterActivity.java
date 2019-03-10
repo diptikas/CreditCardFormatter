@@ -1,11 +1,11 @@
-package com.assignment.creditcardformatter.activity;
+package com.diptika.creditcardformatter.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.assignment.creditcardformatter.R;
-import com.assignment.creditcardformatter.fragments.CreditCardFormatFragment;
-import com.assignment.creditcardformatter.fragments.CreditCardNumberFragment;
+import com.diptika.creditcardformatter.R;
+import com.diptika.creditcardformatter.fragments.CreditCardFormatFragment;
+import com.diptika.creditcardformatter.fragments.CreditCardNumberFragment;
 
 public class CreditCardFormatterActivity extends AppCompatActivity {
     public CreditCardFormatFragment cardFormatFragment;

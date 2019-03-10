@@ -1,4 +1,4 @@
-package com.assignment.creditcardformatter.utils;
+package com.diptika.creditcardformatter.utils;
 
 import android.text.TextUtils;
 

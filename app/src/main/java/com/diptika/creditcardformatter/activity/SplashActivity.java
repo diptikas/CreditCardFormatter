@@ -1,4 +1,4 @@
-package com.assignment.creditcardformatter.activity;
+package com.diptika.creditcardformatter.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,8 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageView;
 
-import com.assignment.creditcardformatter.R;
+import com.diptika.creditcardformatter.R;
+
 
 public class SplashActivity extends AppCompatActivity {
     private static final int DELAY=2000;
