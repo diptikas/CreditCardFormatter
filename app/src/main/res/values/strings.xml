@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CreditCardFormatter</string>
+
+
+    <string name="card_number_sample">XXXX XXXX XXXX XXXX</string>
+    <string name="card_name_sample">CARD HOLDER</string>
+    <string name="card_holders_name">Card Holder\'s Name</string>
+    <string name="card_number">Card Number</string>
+    <string name="invalid_card">Card Info not found.</string>
+
+
+</resources>
