@@ -63,15 +63,19 @@ public class CreditCardFormatFragment extends Fragment {
     public void setCardType(int type) {
         switch (type) {
             case VISA:
+                tvInvalidCard.setVisibility(View.GONE);
                 ivType.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.ic_visa));
                 break;
             case MASTERCARD:
+                tvInvalidCard.setVisibility(View.GONE);
                 ivType.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.ic_mastercard));
                 break;
             case AMEX:
+                tvInvalidCard.setVisibility(View.GONE);
                 ivType.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.ic_amex));
                 break;
             case DINERS:
+                tvInvalidCard.setVisibility(View.GONE);
                 ivType.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.ic_diners));
                 break;
             case NONE:

@@ -1,5 +1,6 @@
 package com.diptika.creditcardformatter.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
 import com.diptika.creditcardformatter.R;
@@ -37,7 +39,7 @@ public class CreditCardNumberFragment extends Fragment {
         tvNumber = cardFormatFragment.getNumber();
         etNumber = view.findViewById(R.id.et_number);
 
-        etNumber.addTextChangedListener(new CreditCardFormattingTextWatcher(etNumber,tvNumber,
+        etNumber.addTextChangedListener(new CreditCardFormattingTextWatcher(etNumber, tvNumber,
                 cardFormatFragment.getCardType(),
                 new CreditCardFormattingTextWatcher.CreditCardType() {
                     @Override
@@ -51,8 +53,9 @@ public class CreditCardNumberFragment extends Fragment {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
-
                     if (activity != null) {
+                        hideSoftKeyboard();
+                        activity.onBackPressed();
                         return true;
                     }
 
@@ -65,11 +68,16 @@ public class CreditCardNumberFragment extends Fragment {
             @Override
             public void onBackClick() {
                 if (activity != null)
-                    activity.onBackPressed();
+                    hideSoftKeyboard();
             }
         });
 
         return view;
+    }
+
+    private void hideSoftKeyboard() {
+        final InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(getView().getWindowToken(), 0);
     }
 
 }
