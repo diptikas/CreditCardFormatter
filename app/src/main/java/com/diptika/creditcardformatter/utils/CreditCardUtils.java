@@ -12,7 +12,7 @@ public class CreditCardUtils {
 
     public static final String VISA_PREFIX = "4";
     public static final String MASTERCARD_PREFIX = "51,52,53,54,55,";
-    public static final String DINERS_PREFIX = "30,36";
+    public static final String DINERS_PREFIX = "30,36,";
     public static final String AMEX_PREFIX = "34,37,";
 
 
